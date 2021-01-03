@@ -11,7 +11,6 @@ let x = 0;
 
 function carousel() {
     let time = setTimeout(function () {
-
         div.src = array[x];
         x++
         if(x === array.length) {
