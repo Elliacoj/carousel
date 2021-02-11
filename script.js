@@ -5,6 +5,8 @@ let image3 = "image3.jpg";
 let image4 = "image4.jpg";
 let array = [image1, image2, image3, image4];
 let images = document.getElementsByClassName("image");
+let buttonLeft = document.getElementById("buttonLeft");
+let buttonright = document.getElementById("buttonRight");
 
 let x = 0;
 
@@ -16,38 +18,44 @@ for(let image of images) {
 function carousel() {
     let time = setTimeout(function () {
         left();
-        carousel()
     }, 3000)
+
+    buttonLeft.addEventListener("click", function () {
+        clearTimeout(time);
+        setTimeout(function () {
+            left();
+        }, 50)
+
+    });
 }
 
 function left() {
     images[0].animate([
-        // keyframes
         { transform: 'translateX(-100%)' }
     ], {
-        // timing options
         duration: 1000,
     });
 
     images[1].animate([
-        // keyframes
         { transform: 'translateX(-100%)' }
     ], {
-        // timing options
         duration: 1000,
     });
 
     images[2].animate([
-        // keyframes
         { transform: 'translateX(-100%)' }
     ], {
-        // timing options
         duration: 1000,
     });
 
-    setTimeout(function () {
+    let timeLeft = setTimeout(function () {
         switchImageLeft();
-    }, 1008)
+        carousel();
+    }, 1008);
+
+    buttonLeft.addEventListener("click", function () {
+        clearTimeout(timeLeft);
+    });
 }
 carousel();
 
@@ -67,4 +75,3 @@ function switchImageLeft() {
         }
     }
 }
-

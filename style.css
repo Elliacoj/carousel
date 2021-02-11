@@ -36,3 +36,20 @@ body {
 .image:nth-child(3) {
     left: +100%;
 }
+
+#buttonLeft, #buttonRight {
+    width: 15%;
+    height: 15%;
+    background-color: red;
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+}
+
+#buttonLeft {
+    left: 2%;
+}
+
+#buttonRight {
+    right: 2%;
+}
