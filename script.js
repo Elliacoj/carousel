@@ -242,5 +242,5 @@ function backgroundParent(image) {
         for(let image of imagesUp) {
             image.style.display = "initial";
         }
-    }, 50);
+    }, 150);
 }
