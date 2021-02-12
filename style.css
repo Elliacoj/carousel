@@ -19,6 +19,7 @@ body {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    background-size: 100%;
 }
 
 .image {
@@ -26,7 +27,6 @@ body {
     width: 100%;
     height: 400px;
     background-size: 100%;
-
 }
 
 .image:nth-child(1) {
