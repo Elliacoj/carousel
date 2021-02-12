@@ -13,10 +13,17 @@ body {
 
 }
 
+#container {
+    width: 100%;
+    display: flex;
+    height: 500px;
+}
+
 #carrousel {
-    width: 40%;
-    height: 60vh;
-    margin: 10% auto 0 auto;
+    width: 30%;
+    height: 100%;
+    margin-top: 10%;
+    margin-left: 15%;
     overflow: hidden;
     position: relative;
     background-size: 60%;
@@ -26,13 +33,39 @@ body {
     background-color: white;
 }
 
+#carrouselUp {
+    width: 10%;
+    height: 100%;
+    margin-top: 10%;
+    margin-left: 15%;
+    overflow: hidden;
+    position: relative;
+    background-size: 80%;
+    background-position: center;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
 .image {
     position: absolute;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
+}
+.imageUp, .imageHidden {
+    position: absolute;
+    width: 100%;
+    height: 33.3333%;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imageHidden {
+    display: none;
 }
 
 .image:nth-child(1) {
@@ -45,6 +78,26 @@ body {
 
 .image:nth-child(3) {
     left: +100%;
+}
+
+.imageUp:nth-child(1) {
+    top: -33.333%;
+}
+
+.imageUp:nth-child(2), .imageHidden:nth-child(1) {
+    top: 0;
+}
+
+.imageUp:nth-child(3),.imageHidden:nth-child(2) {
+    top: +33.333%;
+}
+
+.imageUp:nth-child(4),.imageHidden:nth-child(3) {
+    top: +66.666%;
+}
+
+.imageUp:nth-child(5) {
+    top: +100%;
 }
 
 #buttonLeft, #buttonRight {
