@@ -84,18 +84,6 @@ body {
     top: -33.333%;
 }
 
-.imageHidden:nth-child(1) {
-    background-color: red;
-}
-
-.imageHidden:nth-child(2) {
-    background-color: red;
-}
-
-.imageHidden:nth-child(3) {
-    background-color: red;
-}
-
 .imageUp:nth-child(2) {
     top: 0;
 }
