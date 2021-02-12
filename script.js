@@ -29,6 +29,10 @@ for(let image of imagesUp) {
     }
 }
 
+divs[0].style.top = "0%";
+divs[1].style.top = "+33.333%";
+divs[2].style.top = "+66.666%";
+
 carousel();
 
 /**
@@ -197,31 +201,32 @@ function switchImage(dir) {
 function backgroundParent(image) {
     document.getElementById("carrousel").style.backgroundImage = images[image].style.backgroundImage;
 
-    let x;
-
-    if(image === 2) {
-        x = 2;
-        for(let div of divs) {
-            div.style.display = "initial";
-            div.style.backgroundImage = imagesUp[x].style.backgroundImage;
-            x++;
-        }
-    }
-    else {
-        x = 0;
-        for(let div of divs) {
-            div.style.display = "initial";
-            div.style.backgroundImage = imagesUp[x].style.backgroundImage;
-            x++;
-        }
-    }
-
     for(let image of images) {
         image.style.display = "none";
     }
 
     for(let image of imagesUp) {
         image.style.display = "none";
+    }
+
+    let y;
+
+    if(image === 2) {
+        y = 2;
+        for(let div of divs) {
+            div.style.backgroundImage = imagesUp[y].style.backgroundImage;
+            div.style.display = "initial";
+            y++;
+            console.log(y);
+        }
+    }
+    else {
+        y = 0;
+        for(let div of divs) {
+            div.style.backgroundImage = imagesUp[y].style.backgroundImage;
+            div.style.display = "initial";
+            y++;
+        }
     }
 
     setTimeout(function() {

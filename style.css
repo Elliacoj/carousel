@@ -84,15 +84,27 @@ body {
     top: -33.333%;
 }
 
-.imageUp:nth-child(2), .imageHidden:nth-child(1) {
+.imageHidden:nth-child(1) {
+    background-color: red;
+}
+
+.imageHidden:nth-child(2) {
+    background-color: red;
+}
+
+.imageHidden:nth-child(3) {
+    background-color: red;
+}
+
+.imageUp:nth-child(2) {
     top: 0;
 }
 
-.imageUp:nth-child(3),.imageHidden:nth-child(2) {
+.imageUp:nth-child(3) {
     top: +33.333%;
 }
 
-.imageUp:nth-child(4),.imageHidden:nth-child(3) {
+.imageUp:nth-child(4) {
     top: +66.666%;
 }
 
