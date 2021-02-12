@@ -15,18 +15,24 @@ body {
 
 #carrousel {
     width: 40%;
-    height: 400px;
-    margin: 0 auto;
+    height: 60vh;
+    margin: 10% auto 0 auto;
     overflow: hidden;
     position: relative;
-    background-size: 100%;
+    background-size: 60%;
+    background-position: center;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 .image {
     position: absolute;
     width: 100%;
-    height: 400px;
-    background-size: 100%;
+    height: 60vh;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .image:nth-child(1) {
@@ -44,16 +50,19 @@ body {
 #buttonLeft, #buttonRight {
     width: 15%;
     height: 15%;
-    background-color: red;
+    background-color: black;
     z-index: 1;
     position: absolute;
-    top: 40%;
+    top: 42.5%;
+    opacity: 0.5;
 }
 
 #buttonLeft {
     left: 2%;
+    clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 100% 0%);
 }
 
 #buttonRight {
-    right: 2%;
+    right: 0;
+    clip-path: polygon(50% 50%, 50% 50%, 0% 100%, 0% 0%);
 }
